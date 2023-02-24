@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.activeLink {
+  color: var(--aquamarine);
+  font-weight: 500;
+}
+
+.navbarBurger {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 20px;
+  border: none;
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all .8s ease-out; 
+  opacity: 0;
+}
+
+.isActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.line1, .line2, .line3 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  opacity: 1;
+  background-color: #000;
+  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+.line1 {
+  transform: translateY(-10px);
+}
+
+.line3 {
+  transform: translateY(10px);
+}
+
+.line1.isActive {
+  transform: translateY(0px) rotate(135deg);
+  background-color: var(--active-menu);
+}
+
+.line2.isActive {
+  opacity: 0;
+  background-color: var(--active-menu);
+}
+
+.line3.isActive {
+  transform: translateY(0px) rotate(-135deg);
+  background-color: var(--active-menu);
+}
+
+@media (min-width: 600px) {
+  .navbarBurger {
+    display: none;
+  }
+  .menu{
+    opacity: 1;
+    transform: translateX(0);
+    justify-content: center;
+  }
+}
+

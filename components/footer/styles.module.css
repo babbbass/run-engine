@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px thin var(--aquamarine);
+  /* border-bottom: none; */
+  min-height: 60px;
+  /* font-weight: 500; */
+}
+
+.linkedin{
+  color: #0a66c2;
+}
